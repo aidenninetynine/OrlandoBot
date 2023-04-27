@@ -1,0 +1,18 @@
+{
+  "name": "orlandobot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "discord.js": "^14.9.0",
+    "guilded.js": "^0.20.1",
+    "revolt.js": "^7.0.0-beta.4",
+    "typescript": "^5.0.4"
+  }
+}
