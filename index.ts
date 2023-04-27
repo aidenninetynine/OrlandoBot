@@ -1,4 +1,4 @@
-import { Client as DiscordClient, Events as DiscordEvents, GatewayIntentBits as DiscordGatewayIntentBits } from 'discord.js'
+import { Client as DiscordClient, Events as DiscordEvents, GatewayIntentBits as DiscordGatewayIntentBits, messageLink } from 'discord.js'
 import { Client as GuildedClient } from 'guilded.js'
 import { Client as RevoltClient } from 'revolt.js'
 
@@ -12,7 +12,7 @@ const guildedClient = new GuildedClient({
 });
 let revoltClient = new RevoltClient();
 
-discordClient.once(DiscordEvents.ClientReady, c => {
+discordClient.once(DiscordEvents.ClientReady, (c) => {
     console.log('Discord client logged into the OrlandoNet server as ${c.user.tag}');
 });
 
@@ -23,6 +23,13 @@ guildedClient.on('ready', () => {
 revoltClient.on('ready', async () =>
     console.log('Revolt client logged into the OrlandoNet as $(revoltClient.user?.name}')
 );
+
+
+discordClient.on('message', (msg) => {
+    if (msg.server == '1064664767928729680') {
+
+    };
+});
 
 discordClient.login(discordtoken);
 guildedClient.login();
